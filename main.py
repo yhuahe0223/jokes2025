@@ -35,4 +35,3 @@ if joke == "finished":
         print("Thanks, we appreciate it. ")
     else:
         print("Sorry you did not enjoy it. ")
-```
