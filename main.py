@@ -3,23 +3,25 @@
 
 # make this performance task ready for submission
 # To give the user a fun experience hearing knock knock jokes
-joke_list =['robber', 'tanks','pencils']
 
 
-jokeAnswer = input(f"do you want to hear a joke?")
+joke_list =['robber', 'tanks','pencils']# provided list of jokes 
 
-def rating(rate):
+
+jokeAnswer = input(f"do you want to hear a joke?") # questions the user if they want to hear a joke
+
+def rating(rate):# this function calulates the rating provided by the user, 1-10 
     final_score = (rate * 10)
     print(str(final_score) + " percent satisfaction rate")
     friend = input("Would you recommend this game to a friend? ")
 
-    if friend == "yes" or friend == "maybe":
+    if friend == "yes" or friend == "maybe":# if they recommmend this program to a friend or not
         print("Thanks, we appreciate it. ")
     else:
         print("Sorry you did not enjoy it. ")
     return
 
-def questionReponder(*answer):
+def questionReponder(*answer):# here asks the user what type of joke they want to hear 
     if jokeAnswer == "yes":
         question2 = input(f"what joke would you like to have? List of Jokes:{joke_list}")
 
@@ -29,7 +31,8 @@ def questionReponder(*answer):
                 input("Knock Knock")
                 input("Calder")
                 input("Calder police - I've been robbed!")
-                rate = int(input("Please rate our game 1-10! "))
+                rate = int(input("Please rate our game 1-10! "))# each jokes ends asks the user for their rating
+                                                                #then calls it into the rating program above
                 return rating (rate)
             elif question2 == 'tanks':
                 input("Knock Knock")
@@ -47,7 +50,7 @@ def questionReponder(*answer):
                 input('Error, Try again')
         
                 
-questionReponder(jokeAnswer, joke_list)
+questionReponder(jokeAnswer, joke_list) # here calls into the function questionResponder if the user answerd yes, they want to hear a joke. 
 
 
 
